@@ -3,13 +3,14 @@ import { View, Text, FlatList } from 'react-native';
 import styles from './Categories.style';
 import axios from "axios";
 import CategoryCard from '../../components/CategoryCard';
+import { API_KEY } from '@env';
 
 const Categories = () => {
 
     const [data, setData] = useState([]);
 
     const fetchData = async () => {
-        const url = "https://www.themealdb.com/api/json/v1/1/list.php?c=list";
+        const url = `${API_KEY}list.php?c=list`;
         const { data: responseData } = await axios.get(url);
         setData(responseData.meals)
     }

@@ -13,7 +13,17 @@ const Router = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="Categories" component={Categories_Screen} />
+        <Stack.Screen
+          name="Categories"
+          component={Categories_Screen}
+          options={
+            {
+              headerTintColor: '#ffa000',
+              headerTitleAlign: 'center'
+            }
+
+          }
+        />
         <Stack.Screen name="Meals" component={Meals_Screen} />
         <Stack.Screen name="Detail" component={Detail_Screen} />
       </Stack.Navigator>

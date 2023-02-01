@@ -7,14 +7,14 @@ import useFetch from '../../hooks/useFetch/useFetch';
 
 const Categories = () => {
 
-    const category_url = API_KEY + "list.php?c=list";
+    const category_url = API_KEY + "categories.php";
 
     const data = useFetch(category_url)
 
     const renderCategory = ({ item }) => <CategoryCard category={item} />
 
     return (
-        <View>
+        <View style={styles.container}>
             <FlatList
                 renderItem={renderCategory}
                 data={data}

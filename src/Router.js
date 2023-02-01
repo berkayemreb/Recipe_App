@@ -40,7 +40,7 @@ const Router = () => {
           component={Detail_Screen}
           options={
             {
-              headerTintColor: '#ffa000',
+              headerTintColor: '#9a0007',
               headerTitleAlign: 'center'
             }
 

@@ -14,7 +14,7 @@ const Meals = ({ route }) => {
     const renderMeals = ({ item }) => <MealCard meal={item} />
 
     return (
-        <SafeAreaView>
+        <SafeAreaView style={styles.container}>
             <FlatList
                 renderItem={renderMeals}
                 data={data.meals}

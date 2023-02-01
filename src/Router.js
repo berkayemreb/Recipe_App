@@ -24,7 +24,17 @@ const Router = () => {
 
           }
         />
-        <Stack.Screen name="Meals" component={Meals_Screen} />
+        <Stack.Screen
+          name="Meals"
+          component={Meals_Screen}
+          options={
+            {
+              headerTintColor: '#ffa000',
+              headerTitleAlign: 'center'
+            }
+
+          }
+        />
         <Stack.Screen name="Detail" component={Detail_Screen} />
       </Stack.Navigator>
     </NavigationContainer>

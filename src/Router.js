@@ -35,7 +35,17 @@ const Router = () => {
 
           }
         />
-        <Stack.Screen name="Detail" component={Detail_Screen} />
+        <Stack.Screen
+          name="Detail"
+          component={Detail_Screen}
+          options={
+            {
+              headerTintColor: '#ffa000',
+              headerTitleAlign: 'center'
+            }
+
+          }
+        />
       </Stack.Navigator>
     </NavigationContainer>
   )

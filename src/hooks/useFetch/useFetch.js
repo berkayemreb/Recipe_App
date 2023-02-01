@@ -7,7 +7,7 @@ const useFetch = (url) => {
 
     const fetchData = async () => {
         const { data: responseData } = await axios.get(url);
-        setData(responseData.categories)
+        setData(responseData)
     }
 
     useEffect(() => {

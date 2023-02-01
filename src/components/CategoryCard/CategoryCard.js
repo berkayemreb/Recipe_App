@@ -4,7 +4,7 @@ import styles from './CategoryCard.style';
 
 const CategoryCard = ({ category, onClickCategory }) => {
     return (
-        <TouchableWithoutFeedback onPress={onClickCategory}>
+        <TouchableWithoutFeedback onPress={() => onClickCategory(category.strCategory)}>
             <View style={styles.container}>
                 <View style={styles.image_container}>
                     <Image style={styles.image} source={{ uri: category.strCategoryThumb }} />

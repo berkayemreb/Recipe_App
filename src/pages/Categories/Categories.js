@@ -3,7 +3,7 @@ import { View, FlatList } from 'react-native';
 import styles from './Categories.style';
 import CategoryCard from '../../components/CategoryCard';
 import { API_KEY } from '@env';
-import useFetch from '../../hooks/useFetch/useFetch';
+import useFetch from '../../hooks/useFetch';
 
 const Categories = ({ navigation }) => {
 
@@ -11,8 +11,10 @@ const Categories = ({ navigation }) => {
 
     const data = useFetch(category_url)
 
-    const onClickCategory = () => {
-        navigation.navigate('Meals');
+    const onClickCategory = (strCategory) => {
+        navigation.navigate('Meals', {
+            categoryName: strCategory
+        });
     }
 
     const renderCategory = ({ item }) => <CategoryCard category={item} onClickCategory={onClickCategory} />
@@ -21,7 +23,7 @@ const Categories = ({ navigation }) => {
         <View style={styles.container}>
             <FlatList
                 renderItem={renderCategory}
-                data={data}
+                data={data.categories}
             />
         </View>
     )

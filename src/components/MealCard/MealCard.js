@@ -2,9 +2,9 @@ import React from "react";
 import { View, Text, TouchableWithoutFeedback, Image } from 'react-native';
 import styles from './MealCard.style';
 
-const MealCard = ({ meal }) => {
+const MealCard = ({ meal, onClickMeal }) => {
     return (
-        <TouchableWithoutFeedback onPress={() => console.log(meal.idMeal)}>
+        <TouchableWithoutFeedback onPress={() => onClickMeal(meal.idMeal)}>
             <View style={styles.container}>
                 <Image style={styles.image} source={{ uri: meal.strMealThumb }} />
                 <View style={styles.name_container}>

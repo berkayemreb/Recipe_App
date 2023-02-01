@@ -5,13 +5,20 @@ import { API_KEY } from '@env';
 import useFetch from "../../hooks/useFetch";
 import MealCard from "../../components/MealCard";
 
-const Meals = ({ route }) => {
+const Meals = ({ route, navigation }) => {
 
     const { categoryName } = route.params;
 
     const data = useFetch(API_KEY + "filter.php?c=" + categoryName);
 
-    const renderMeals = ({ item }) => <MealCard meal={item} />
+    const onClickMeal = (idMeal) => {
+        navigation.navigate('Detail',
+            {
+                id: idMeal
+            })
+    }
+
+    const renderMeals = ({ item }) => <MealCard meal={item} onClickMeal={onClickMeal} />
 
     return (
         <SafeAreaView style={styles.container}>

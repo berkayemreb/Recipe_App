@@ -18,8 +18,8 @@ const Router = () => {
           component={Categories_Screen}
           options={
             {
-              headerTintColor: '#ffa000',
-              headerTitleAlign: 'center'
+              headerTintColor: '#005cb2',
+              headerTitleAlign: 'center',
             }
 
           }
@@ -29,7 +29,7 @@ const Router = () => {
           component={Meals_Screen}
           options={
             {
-              headerTintColor: '#ffa000',
+              headerTintColor: '#005cb2',
               headerTitleAlign: 'center'
             }
 
@@ -40,7 +40,7 @@ const Router = () => {
           component={Detail_Screen}
           options={
             {
-              headerTintColor: '#9a0007',
+              headerTintColor: '#005cb2',
               headerTitleAlign: 'center'
             }
 

@@ -19,7 +19,7 @@ export default StyleSheet.create({
     },
     headerName: {
         fontSize: 22,
-        color: '#9a0007',
+        color: '#0d47a1',
         fontWeight: '600',
         textAlign: 'center'
     },
@@ -27,7 +27,7 @@ export default StyleSheet.create({
         fontStyle: 'italic',
         fontSize: 16,
         textAlign: 'right',
-        color: '#d32f2f'
+        color: '#5472d3'
     },
     body_container: {
         marginTop: 7,
@@ -38,7 +38,7 @@ export default StyleSheet.create({
     },
     youtubeLink_container: {
         width: "100%",
-        backgroundColor: '#e81e14',
+        backgroundColor: '#d32f2f',
         padding: 10,
         borderRadius: 50,
         marginVertical: 5,

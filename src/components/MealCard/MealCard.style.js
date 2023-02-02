@@ -6,7 +6,7 @@ const heightOfScreen = Dimensions.get('screen').height;
 export default StyleSheet.create({
     container: {
         marginHorizontal: 15,
-        marginVertical: 8,
+        marginBottom: 15,
     },
     image: {
         maxWidth: widthOfScreen,

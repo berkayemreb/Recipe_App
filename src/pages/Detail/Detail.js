@@ -1,6 +1,5 @@
 import React from "react";
 import { SafeAreaView, Linking, FlatList } from 'react-native';
-import styles from './Detail.style';
 import useFetch from '../../hooks/useFetch';
 import { API_KEY } from '@env';
 import LoadingScreen from "../../components/LoadingScreen";
@@ -10,7 +9,7 @@ import DetailCard from "../../components/DetailCard";
 const Detail = ({ route }) => {
     const { id } = route.params;
 
-    const { data, loading, error } = useFetch(API_KEY + "asdlookup.php?i=" + id);
+    const { data, loading, error } = useFetch(API_KEY + "lookup.php?i=" + id);
 
     if (loading) {
         return <LoadingScreen />

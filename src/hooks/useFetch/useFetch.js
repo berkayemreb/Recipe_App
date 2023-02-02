@@ -5,17 +5,19 @@ const useFetch = (url) => {
 
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(false);
+    const [error, setError] = useState(null);
 
     const fetchData = async () => {
 
         try {
+
             const { data: responseData } = await axios.get(url);
+            setLoading(false);
             setData(responseData);
+
+        } catch (err) {
             setLoading(false);
-        } catch (error) {
-            setLoading(false);
-            setError(true);
+            setError(err.message);
         }
     }
 

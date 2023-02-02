@@ -13,6 +13,7 @@ const Meals = ({ route, navigation }) => {
 
     const { data, loading, error } = useFetch(API_KEY + "filter.php?c=" + categoryName);
 
+
     if (loading) {
         return <LoadingScreen />
     }

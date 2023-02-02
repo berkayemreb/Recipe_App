@@ -24,7 +24,7 @@ const Detail = ({ route }) => {
 
     return (
         <SafeAreaView style={styles.container}>
-            <ScrollView>
+            <ScrollView showsVerticalScrollIndicator={false}>
                 <Image style={styles.image} source={{ uri: data.meals[0].strMealThumb }} />
                 <View style={styles.inner_container}>
                     <View style={styles.header_contanier}>
@@ -40,6 +40,7 @@ const Detail = ({ route }) => {
                 </View>
             </ScrollView>
         </SafeAreaView>
+
     )
 }
 
